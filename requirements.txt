@@ -1,8 +1,10 @@
-cryptography>=2.3dev1
-libnacl>=1.6.1
-netifaces
 aiohttp
 aiohttp_apispec
-pyOpenSSL
-pyasn1
 asynctest
+cryptography>=2.3dev1
+hyperloglog
+libnacl>=1.6.1
+netifaces
+pyasn1
+pyOpenSSL
+requests
