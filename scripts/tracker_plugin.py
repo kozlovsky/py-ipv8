@@ -4,6 +4,7 @@ This script enables to start the tracker.
 Select the port you want to use by setting the `listen_port` command line argument.
 """
 import argparse
+import logging
 import random
 import signal
 import sys
@@ -26,6 +27,9 @@ from ipv8.messaging.payload import IntroductionRequestPayload
 from ipv8.peer import Peer
 from ipv8.peerdiscovery.churn import DiscoveryStrategy
 from ipv8.peerdiscovery.network import Network
+
+
+logging.basicConfig(level=logging.DEBUG)
 
 
 class SimpleChurn(DiscoveryStrategy):
