@@ -116,7 +116,7 @@ class EndpointServer(Community):
         }
         s = json.dumps(data)
         b = base64.b64encode(zlib.compress(s.encode('utf-8'))).decode('ascii')
-        print(f'Preparing data. Raw JSON size: {len(s)}, compressed size: {len(b)}')
+        print('Preparing data. Raw JSON size: %d, compressed size: %s' % (len(s), len(b)))
         print('posting data to collector')
         try:
             requests.post(COLLECTOR_URL, json={
